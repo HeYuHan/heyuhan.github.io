@@ -363,7 +363,7 @@
 
       
         <p>#修正<br>unity 4.7以上没有该问题,以下版本改了也没用</p>
-<p>#问题描述<br>unity www在下载含有中文路径的文件时会下载失败，此时对路径进行url编码即可<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> url = file:<span class="comment"><span class="doctag">///</span>文件夹/file.txt</span></span><br><span class="line"><span class="comment">//编码</span></span><br><span class="line">url = WWW.EscapeURL(url);</span><br><span class="line"><span class="comment">//解码</span></span><br><span class="line">url = WWW.UnEscapeURL(url);</span><br></pre></td></tr></table></figure></p>
+<p>#问题描述<br>unity www在下载含有中文路径的文件时会下载失败，此时对路径进行url编码即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string url = file:///文件夹/file.txt</span><br><span class="line">//编码</span><br><span class="line">url = WWW.EscapeURL(url);</span><br><span class="line">//解码</span><br><span class="line">url = WWW.UnEscapeURL(url);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
